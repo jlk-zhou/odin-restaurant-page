@@ -9,7 +9,7 @@ body {
     height: 200px; 
 }
 
-img.restaurant {
+.banner > img {
     width: inherit;
     height: inherit; 
     object-fit: cover; 
@@ -21,4 +21,8 @@ img.restaurant {
     width: inherit; 
     height: inherit; 
     position: relative; 
+}
+
+.our-menu > img {
+    width: 300px; 
 }
