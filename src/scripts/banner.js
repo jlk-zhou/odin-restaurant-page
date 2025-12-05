@@ -1,4 +1,10 @@
-function banner(imgSrc, altText, headText, photographerName, creditLink) {
+// Function that creates the top banner element for each page
+function banner(
+    imgSrc, 
+    altText,
+    headText, 
+    photographerName, 
+    creditLink) {
     // Create the banner div container
     const bannerDiv = document.createElement("div"); 
     bannerDiv.classList.add("banner"); 
