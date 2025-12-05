@@ -1,4 +1,24 @@
+body {
+    background-color: rgb(103, 31, 31);
+    color: white; 
+    margin: 0px; 
+}
+
+.banner {
+    width: 100vw; 
+    height: 200px; 
+}
+
 img.restaurant {
-    width: 500px;
-    height: auto; 
+    width: inherit;
+    height: inherit; 
+    object-fit: cover; 
+    position: absolute; 
+    filter: grayscale() brightness(40%); 
+}
+
+.headline {
+    width: inherit; 
+    height: inherit; 
+    position: relative; 
 }
