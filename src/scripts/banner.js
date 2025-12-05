@@ -34,6 +34,13 @@ function headline(headText, photographerName, creditLink) {
     headlineDiv.appendChild(headlineText); 
 
     // Create and append credit
+    const credit = creditLine(photographerName, creditLink); 
+    headlineDiv.appendChild(credit); 
+
+    return headlineDiv; 
+}
+
+function creditLine(photographerName, creditLink) {
     const credit = document.createElement("p"); 
     credit.classList.add("credit"); 
 
@@ -43,13 +50,9 @@ function headline(headText, photographerName, creditLink) {
     const photographerLink = document.createElement("a"); 
     photographerLink.setAttribute("href", creditLink);
     photographerLink.textContent = photographerName; 
-    // photographerLink.setAttribute("href", "https://www.pexels.com/@brett-sayles/"); 
-    // photographerLink.textContent = "Brett Sayles"; 
     credit.appendChild(photographerLink); 
 
-    headlineDiv.appendChild(credit); 
-
-    return headlineDiv; 
+    return credit; 
 }
 
-export { banner };  
+export { banner, creditLine };  

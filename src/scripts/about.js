@@ -1,5 +1,7 @@
 import aboutImgSrc from "../img/about.jpg"; 
-import { banner } from "./banner.js"; 
+import accessImgSrc from "../img/access.jpg"; 
+import contactImgSrc from "../img/contact.jpg"; 
+import { banner, creditLine } from "./banner.js"; 
 
 function story() {
     const storyText = document.createElement("p"); 
@@ -9,6 +11,25 @@ function story() {
     return storyText; 
 }
 
+function imgWithCredit(
+    imgSrc, 
+    forSection, 
+    photographerName, 
+    photographerLink
+) {
+    const imgDiv = document.createElement("div"); 
+    imgDiv.classList.add(`${forSection}-img-container`); 
+    const img = document.createElement("img"); 
+    img.src = imgSrc; 
+    imgDiv.appendChild(img); 
+    imgDiv.appendChild(creditLine(
+        photographerName,
+        photographerLink 
+    )); 
+
+    return imgDiv; 
+}
+
 function access() {
     const accessDiv = document.createElement("div"); 
     accessDiv.classList.add("access"); 
@@ -16,6 +37,14 @@ function access() {
     const accessHeader = document.createElement("h1"); 
     accessHeader.textContent = "Access"; 
     accessDiv.appendChild(accessHeader); 
+
+    const accessImgDiv = imgWithCredit(
+        accessImgSrc, 
+        "access", 
+        "Lil Artsy", 
+        "https://www.pexels.com/@lilartsy/"
+    )
+    accessDiv.appendChild(accessImgDiv); 
 
     const accessText = document.createElement("p"); 
     accessText.classList.add("access-instructions"); 
@@ -41,6 +70,14 @@ function contact() {
     const contactHeading = document.createElement("h1"); 
     contactHeading.textContent = "Contact"; 
     contactDiv.appendChild(contactHeading); 
+
+    const contactImgDiv = imgWithCredit(
+        contactImgSrc, 
+        "contact", 
+        "Sevki Kann Arslan", 
+        "https://www.pexels.com/@sevki-kaan-arslan-2157844887/", 
+    ); 
+    contactDiv.appendChild(contactImgDiv); 
 
     const contactInfo = document.createElement("ul"); 
     contactInfo.classList.add("contact-info"); 

@@ -26,3 +26,8 @@ body {
 .our-menu > img {
     width: 300px; 
 }
+
+.access img, 
+.contact img {
+    width: 300px; 
+}
