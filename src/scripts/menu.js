@@ -3,7 +3,7 @@ import { banner } from "./banner.js";
 
 function menu() {
     const menuContent = document.createElement("ul"); 
-    menuContent.classList.add("menu"); 
+    menuContent.classList.add("menu-list"); 
 
     const menuItems = [
         {"name": "lamb, steamed", "price": "12"}, 
@@ -40,9 +40,10 @@ function menuItem(name, price) {
 
 function renderMenu() {
     const contentDiv = document.querySelector("#content"); 
+    contentDiv.textContent = ""; 
 
     const menuDiv = document.createElement("div"); 
-    menuDiv.classList.add("menu-section")
+    menuDiv.classList.add("menu")
 
     const bannerDiv = banner(
         menuImgSrc, 

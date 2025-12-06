@@ -6,7 +6,16 @@ import { banner, creditLine } from "./banner.js";
 function story() {
     const storyText = document.createElement("p"); 
     storyText.classList.add("story"); 
-    storyText.textContent = "We started off as a small biistro serving weird food blah blah blah... "; 
+    storyText.textContent = `
+        We started off as a small biistro serving the weirdest food.
+        Back then, it was all experiments, mismatched plates, and a 
+        whole lot of trial and error. But people loved the quirky 
+        charm—and somehow, the odd dishes turned into crowd favorites. 
+        Over time, the recipes got refined, the space grew, and the 
+        little bistro with the strange menu became a local legend. 
+        Funny how the most unexpected beginnings can turn into something 
+        amazing. 
+        `; 
 
     return storyText; 
 }
@@ -48,7 +57,14 @@ function access() {
 
     const accessText = document.createElement("p"); 
     accessText.classList.add("access-instructions"); 
-    accessText.textContent = "We're really easy to be found. Just go to this door and this street blah blah... "; 
+    accessText.textContent = `
+        We’re really easy to find. Just head down the main street, 
+        look for the door with the big friendly sign, and you can’t 
+        miss us—blah blah blah. Whether you’re walking, driving, 
+        or just wandering around with no real plan, chances are 
+        you’ll stumble right into us. We like it that way: simple, 
+        straightforward, and welcoming from the moment you spot the entrance.
+    `; 
 
     accessDiv.appendChild(accessText); 
 
@@ -98,6 +114,7 @@ function contact() {
 
 function renderAbout() {
     const contentDiv = document.querySelector("#content"); 
+    contentDiv.textContent = ""; 
 
     const aboutDiv = document.createElement("div"); 
     aboutDiv.classList.add("about"); 
